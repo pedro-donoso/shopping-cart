@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const initialCart = [
-  { id: 1, title: "Producto", description: "Desc" },
-  { id: 2, title: "Producto #2", description: "Desc #2" },
+  { id: 1, title: "Producto", description: "Descripción" },
+  { id: 2, title: "Producto #2", description: "Descripción #2" },
 ];
 
 const ShoppingCart = () => {
@@ -28,7 +28,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="container-fluid bg-primary">
+    <div className="container">
       <button className="btn btn-sm btn-success my-2"
         onClick={() =>
           addProduct({
@@ -41,7 +41,7 @@ const ShoppingCart = () => {
       </button>
 
       {cart.map((product) => (
-        <div key={product.id} className="text-white mt-2">
+        <div key={product.id} className="mt-2">
           <h3 className="my-3">
             {product.id}
             {product.title}
@@ -60,9 +60,10 @@ const ShoppingCart = () => {
           >
             Actualizar
           </button>
+          <hr/>
         </div>
       ))}
-            <div className="bg-white pb-5 px-5 mt-2">
+            <div className="bg-warning py-2 px-2 mt-2">
             <pre>
               {JSON.stringify(cart, null, 4)}
             </pre>
