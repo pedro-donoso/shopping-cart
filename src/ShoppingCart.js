@@ -62,7 +62,7 @@ const ShoppingCart = () => {
           </button>
         </div>
       ))}
-            <div className="bg-white py-5 px-5 mt-2">
+            <div className="bg-white pb-5 px-5 mt-2">
             <pre>
               {JSON.stringify(cart, null, 4)}
             </pre>
