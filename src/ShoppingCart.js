@@ -42,7 +42,7 @@ const ShoppingCart = () => {
 
       {cart.map((product) => (
         <div key={product.id} className="text-white mt-2">
-          <h3>
+          <h3 className="my-5">
             {product.id}
             {product.title}
           </h3>
