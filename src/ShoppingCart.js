@@ -8,15 +8,15 @@ const initialCart = [
 const ShoppingCart=()=>{
   const [cart, setCart]=useState(initialCart);
 
-  const deleteProduct=()=>{
-    const changedCart = [];
+  const deleteProduct=(productId)=>{
+    const changedCart = cart.filter(product=>product.id !==productId);
     setCart(changedCart);
   }
 
   return (
     <div>
 
-      <button onClick={()=>deleteProduct(2)}>
+      <button onClick={()=>deleteProduct(1)}>
         Delete
       </button>
 
