@@ -1,3 +1,4 @@
 ## https://carro-de-compras-en-react.netlify.app/
 
-![vista_mobil](https://user-images.githubusercontent.com/68760595/150696561-55e4296d-80a1-4183-927c-4bb4151eba0b.png)
+![nueva](https://user-images.githubusercontent.com/68760595/150699933-4664b96e-a651-4621-ac38-af58eea57168.png)
+
