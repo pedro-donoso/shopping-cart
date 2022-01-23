@@ -13,8 +13,23 @@ const ShoppingCart=()=>{
     setCart(changedCart);
   }
 
+  const addProduct=(newProduct)=>{
+    newProduct.id=Date.now();
+
+    const changedCart=[
+      ...cart,
+      newProduct,
+    ];
+    setCart(changedCart);
+  }
+
   return (
     <div>
+
+      <button onClick={()=>addProduct({title:"Nuevo título", description:"Nueva Desc"})}>
+      Add
+      </button>
+
       {cart.map(product=>(
         <div key={product.id}>
           <h1>{product.id}{product.title}</h1>
