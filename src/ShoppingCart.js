@@ -28,7 +28,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="container bg-primary">
+    <div className="container-fluid bg-primary">
       <button className="btn btn-sm btn-success my-2"
         onClick={() =>
           addProduct({
