@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const ShoppingCart = () => {
+
+  const [cart, setCart]=useState(in)
+
   return (
     <div>
       <h1>Shopping Cart</h1>
