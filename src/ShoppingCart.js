@@ -7,9 +7,18 @@ const initialCart = [
 
 const ShoppingCart=()=>{
   const [cart, setCart]=useState(initialCart);
+
+  const deleteProduct=()=>{
+    const changedCart = [];
+    setCart(changedCart);
+  }
+
   return (
     <div>
 
+      <button onClick={()=>deleteProduct(2)}>
+        Delete
+      </button>
 
 
       {cart.map(product=>(
