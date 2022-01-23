@@ -15,16 +15,13 @@ const ShoppingCart=()=>{
 
   return (
     <div>
-
-      <button onClick={()=>deleteProduct(1)}>
-        Delete
-      </button>
-
-
       {cart.map(product=>(
         <div key={product.id}>
-          <h1>{product.title}</h1>
+          <h1>{product.id}{product.title}</h1>
           <p>{product.description}</p>
+          <button onClick={()=>deleteProduct(product.id)}>
+        Delete
+      </button>
         </div>
       ))}
     </div>
