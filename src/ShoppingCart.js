@@ -17,8 +17,9 @@ const ShoppingCart=()=>{
     newProduct.id=Date.now();
 
     const changedCart=[
+        newProduct,
       ...cart,
-      newProduct,
+    
     ];
     setCart(changedCart);
   }
@@ -26,13 +27,16 @@ const ShoppingCart=()=>{
   return (
     <div>
 
-      <button onClick={()=>addProduct({title:"Nuevo título", description:"Nueva Desc"})}>
+      <button onClick={()=>addProduct({
+      title:" Nuevo Producto", 
+      description:"Descripción Producto"
+      })}>
       Add
       </button>
 
       {cart.map(product=>(
         <div key={product.id}>
-          <h1>{product.id}{product.title}</h1>
+          <h2>{product.id}{product.title}</h2>
           <p>{product.description}</p>
           <button onClick={()=>deleteProduct(product.id)}>
         Delete
