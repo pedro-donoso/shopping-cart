@@ -42,7 +42,7 @@ const ShoppingCart = () => {
 
       {cart.map((product) => (
         <div key={product.id} className="text-white mt-2">
-          <h3 className="my-5">
+          <h3 className="my-3">
             {product.id}
             {product.title}
           </h3>
@@ -60,10 +60,9 @@ const ShoppingCart = () => {
           >
             Actualizar
           </button>
-            <hr/>
         </div>
       ))}
-            <div className="bg-white py-3 px-5">
+            <div className="bg-white py-5 px-5 mt-2">
             <pre>
               {JSON.stringify(cart, null, 4)}
             </pre>
