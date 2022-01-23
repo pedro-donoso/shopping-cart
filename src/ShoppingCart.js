@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const initialCart = [
-  { id: 1, title: "Product", description: "Desc" },
-  { id: 2, title: "Product #2", description: "Desc #2" },
+  { id: 1, title: "Producto", description: "Desc" },
+  { id: 2, title: "Producto #2", description: "Desc #2" },
 ];
 
 const ShoppingCart = () => {
@@ -28,8 +28,8 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div>
-      <button
+    <div className="container bg-primary">
+      <button className="btn btn-sm btn-success my-2"
         onClick={() =>
           addProduct({
             title: " Nuevo Producto",
@@ -37,33 +37,33 @@ const ShoppingCart = () => {
           })
         }
       >
-        Add
+        + Producto
       </button>
 
       {cart.map((product) => (
-        <div key={product.id}>
+        <div key={product.id} className="text-white mt-2">
           <h3>
             {product.id}
             {product.title}
           </h3>
           <p>{product.description}</p>
-          <button onClick={() => deleteProduct(product.id)}>Delete</button>
+          <button onClick={() => deleteProduct(product.id)} className="btn btn-sm btn-danger">- Producto</button>
         
-          <button
+          <button className="btn btn-sm btn-warning mx-2"
             onClick={() =>
               updateProduct({
                 id: product.id,
-                title: " Producto Editado",
+                title: " Producto Actualizado",
                 description: "Descripción Editada",
               })
             }
           >
-            Update
+            Actualizar
           </button>
             <hr/>
         </div>
       ))}
-            <div>
+            <div className="bg-white py-3 px-5">
             <pre>
               {JSON.stringify(cart, null, 4)}
             </pre>
