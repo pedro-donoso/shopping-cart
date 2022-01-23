@@ -24,12 +24,21 @@ const ShoppingCart=()=>{
     setCart(changedCart);
   }
 
+  const updateProduct=(editProduct)=>{
+    const changedCart=cart.map(product=>(
+      product.id===editProduct.id
+      ?editProduct
+      :product
+    ));
+    setCart(changedCart);
+  }
+
   return (
     <div>
 
       <button onClick={()=>addProduct({
       title:" Nuevo Producto", 
-      description:"Descripción Producto"
+      description:"Nueva Descripción"
       })}>
       Add
       </button>
@@ -40,6 +49,13 @@ const ShoppingCart=()=>{
           <p>{product.description}</p>
           <button onClick={()=>deleteProduct(product.id)}>
         Delete
+      </button>
+      <button onClick={()=>updateProduct({
+      id:2,
+      title:" Producto Editado", 
+      description:"Descripción Editada"
+      })}>
+      Update
       </button>
         </div>
       ))}
